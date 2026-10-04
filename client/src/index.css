@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@import "quill/dist/quill.snow.css";
+
+@theme {
+  --font-serif: "Newsreader", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+}
+
+/* Custom scrollbars and styling */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Luxurious Warm Editorial Parchment Canvas */
+body {
+  background-color: #FAF6EE;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(243, 235, 218, 0.8) 0px, transparent 45%),
+    radial-gradient(at 100% 0%, rgba(238, 227, 206, 0.7) 0px, transparent 40%),
+    radial-gradient(at 50% 30%, rgba(254, 252, 247, 0.9) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, rgba(235, 222, 198, 0.75) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(240, 229, 208, 0.7) 0px, transparent 45%);
+  background-attachment: fixed;
+  color: #1c1917;
+  min-height: 100vh;
+}
+
+/* Tabular figures helper */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Editorial Card & Section Elevation */
+.editorial-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 218, 202, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(60, 48, 30, 0.04), 0 2px 6px -1px rgba(60, 48, 30, 0.02);
+  transition: all 0.25s ease;
+}
+
+.editorial-card:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(180, 165, 140, 0.9);
+  box-shadow: 0 10px 25px -4px rgba(60, 48, 30, 0.08), 0 4px 10px -2px rgba(60, 48, 30, 0.04);
+}
+
+/* Quill.js Editorial Theme Refinement */
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-color: #d6cfc0 !important;
+  background-color: #f7f3ea;
+  padding: 0.6rem 0.75rem !important;
+}
+
+.ql-container.ql-snow {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  border-color: #d6cfc0 !important;
+  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  min-height: 240px;
+}
+
+.ql-editor {
+  min-height: 240px;
+  line-height: 1.75;
+  color: #1c1917;
+  padding: 1rem 1.25rem !important;
+}
+
+.ql-editor p {
+  margin-bottom: 1rem;
+}
+
+.ql-editor h1, .ql-editor h2, .ql-editor h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #0c0a09;
+}
+
+.ql-editor h1 { font-size: 1.75rem; }
+.ql-editor h2 { font-size: 1.4rem; }
+.ql-editor h3 { font-size: 1.15rem; }
+
+.ql-editor blockquote {
+  border-left: 3px solid #8b7355;
+  padding-left: 1rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: #44403c;
+  background-color: #fbf9f5;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.ql-editor pre {
+  background-color: #1c1917;
+  color: #fafaf9;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+/* Article rich typography renderer */
+.article-rich-content h1,
+.article-rich-content h2,
+.article-rich-content h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: #1c1917;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.article-rich-content h1 { font-size: 2rem; }
+.article-rich-content h2 { font-size: 1.6rem; border-bottom: 1px solid #eee7db; padding-bottom: 0.4rem; }
+.article-rich-content h3 { font-size: 1.3rem; }
+
+.article-rich-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #292524;
+}
+
+.article-rich-content blockquote {
+  border-left: 3px solid #8b7355;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #44403c;
+  background-color: rgba(247, 243, 234, 0.7);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.article-rich-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-rich-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-rich-content li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+
+.article-rich-content a {
+  color: #8b5cf6;
+  text-decoration: underline;
+}
+
+.article-rich-content pre {
+  background-color: #1c1917;
+  color: #f5f5f4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
